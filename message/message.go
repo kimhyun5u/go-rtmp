@@ -33,12 +33,12 @@ func (m *CtrlWinAckSize) TypeID() TypeID {
 	return TypeIDCtrlWinAckSize
 }
 
-type SetPerrBandwidth struct {
+type SetPeerBandwidth struct {
 	Size  uint32
 	Limit uint8
 }
 
-func (m *SetPerrBandwidth) TypeID() TypeID {
+func (m *SetPeerBandwidth) TypeID() TypeID {
 	return TypeIDSetPeerBandwidth
 }
 

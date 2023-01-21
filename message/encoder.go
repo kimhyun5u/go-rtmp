@@ -22,7 +22,7 @@ func (enc *Encoder) Encode(msg Message) error {
 		return enc.encodeUserCtrl(msg)
 	case *CtrlWinAckSize:
 		return enc.encodeCtrlWinAckSize(msg)
-	case *SetPerrBandwidth:
+	case *SetPeerBandwidth:
 		return enc.encodeSetPeerBandwidth(msg)
 	case *CommandMessageAMF0:
 		return enc.encodeCommandMessageAMF0(msg)
@@ -44,7 +44,7 @@ func (enc *Encoder) encodeCtrlWinAckSize(m *CtrlWinAckSize) error {
 	return nil
 }
 
-func (enc *Encoder) encodeSetPeerBandwidth(m *SetPerrBandwidth) error {
+func (enc *Encoder) encodeSetPeerBandwidth(m *SetPeerBandwidth) error {
 	buf := make([]byte, 5)
 	binary.BigEndian.PutUint32(buf, m.Size)
 	buf[4] = m.Limit

@@ -22,7 +22,7 @@ type ChunkStreamLayer struct {
 	handler *Handler
 }
 
-func NewChunnkStreaamLayer(r io.Reader, w io.Writer, h *Handler) *ChunkStreamLayer {
+func NewChunkStreamLayer(r io.Reader, w io.Writer, h *Handler) *ChunkStreamLayer {
 	return &ChunkStreamLayer{
 		r:       NewChunkStreamReader(r),
 		w:       NewCHunkStreamWriter(w),

@@ -26,7 +26,7 @@ var Version = [4]byte{0, 0, 0, 0}
 
 var timeNow = time.Now
 
-func handshakeWithClient(r io.Reader, w io.Writer) error {
+func HandshakeWithClient(r io.Reader, w io.Writer) error {
 	d := NewDecoder(r)
 	e := NewEncoder(w)
 
